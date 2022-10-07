@@ -8,4 +8,12 @@
 			<item>Initial release</item>
 		</note>
 	</changelog>
+	<changelog>
+		<element>turnstile</element>
+		<type>plugin</type>
+		<version>1.0.1</version>
+		<fix>
+			<item>Corrected update server URL</item>
+		</fix>
+	</changelog>
 </changelogs>

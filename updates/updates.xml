@@ -21,4 +21,25 @@
 		<targetplatform name="joomla" version="(4|3\.([89]|10))"/>
 		<php_minimum>5.3.10</php_minimum>
 	</update>
+	<update>
+		<name>Captcha - Cloudflare Turnstile</name>
+		<description>Cloudflare Turnstile plugin.</description>
+		<element>turnstile</element>
+		<type>plugin</type>
+		<folder>captcha</folder>
+		<client>site</client>
+		<maintainer>SharkyKZ</maintainer>
+		<maintainerurl>https://github.com/SharkyKZ/joomla-turnstile-plugin</maintainerurl>
+		<version>1.0.1</version>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/SharkyKZ/joomla-turnstile-plugin/releases/download/1.0.1/plg_captcha_turnstile-1.0.1.zip</downloadurl>
+		</downloads>
+		<sha512>f9f662e4fd7bb0f43b4f94d31c17d3b5cd9c2108209fe617ca56d989dd0aeff2bcc8c9336067dd13d41ac13d08d6b070e7689301a05a253f1f3594f10b94ffa0</sha512>
+		<sha384>a793ae14ae5b3ee68ecd3395fca17ce6837a1f266ca11e0cb2366775bee20e3de4bff814443c9cc22f96d705688eab90</sha384>
+		<sha256>40f2370e1dcbeba4bf0d631b404d9f16c801af6916d92bdb3ada76050f2fbf96</sha256>
+		<infourl title="Captcha - Cloudflare Turnstile">https://github.com/SharkyKZ/joomla-turnstile-plugin/releases/tag/1.0.1</infourl>
+		<changelogurl>https://raw.githubusercontent.com/SharkyKZ/joomla-turnstile-plugin/master/updates/changelog.xml</changelogurl>
+		<targetplatform name="joomla" version="(4|3\.([89]|10))"/>
+		<php_minimum>5.3.10</php_minimum>
+	</update>
 </updates>
