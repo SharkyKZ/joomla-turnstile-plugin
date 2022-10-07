@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelogs>
+	<changelog>
+		<element>turnstile</element>
+		<type>plugin</type>
+		<version>1.0.0</version>
+		<note>
+			<item>Initial release</item>
+		</note>
+	</changelog>
 </changelogs>
