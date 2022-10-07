@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="captcha" method="upgrade">
+	<name>plg_captcha_turnstile</name>
+	<author>SharkyKZ</author>
+	<creationDate>2022-10-06</creationDate>
+	<copyright>(C) 2022 SharkyKZ</copyright>
+	<license>GPL-2.0-or-later</license>
+	<version>1.0.0</version>
+	<description>PLG_CAPTCHA_TURNSTILE_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="turnstile">turnstile.php</filename>
+		<filename>install.script.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<scriptfile>install.script.php</scriptfile>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_captcha_turnstile.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_captcha_turnstile.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="siteKey"
+					type="text"
+					label="PLG_CAPTCHA_TURNSTILE_CONFIG_SITE_KEY_LABEL"
+				/>
+				<field
+					name="secret"
+					type="text"
+					label="PLG_CAPTCHA_TURNSTILE_CONFIG_SECRET_LABEL"
+				/>
+				<field
+					name="theme"
+					type="list"
+					label="PLG_CAPTCHA_TURNSTILE_CONFIG_THEME_LABEL"
+					default="auto"
+					validate="options"
+					>
+					<option value="auto">PLG_CAPTCHA_TURNSTILE_CONFIG_THEME_OPTION_AUTO</option>
+					<option value="light">PLG_CAPTCHA_TURNSTILE_CONFIG_THEME_OPTION_LIGHT</option>
+					<option value="dark">PLG_CAPTCHA_TURNSTILE_CONFIG_THEME_OPTION_DARK</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="strictMode"
+					type="radio"
+					label="PLG_CAPTCHA_TURNSTILE_CONFIG_STRICT_MODE_LABEL"
+					description="PLG_CAPTCHA_TURNSTILE_CONFIG_STRICT_MODE_DESCRIPTION"
+					class="btn-group btn-group-yesno"
+					default="0"
+					filter="uint"
+					validate="options"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<changelogurl>https://raw.githubusercontent.com/SharkyKZ/plg_captcha_turnstile/master/updates/changelog.xml</changelogurl>
+	<updateservers>
+		<server type="extension" name="Captcha - Cloudflare Turnstile">https://raw.githubusercontent.com/SharkyKZ/plg_captcha_turnstile/master/updates/updates.xml</server>
+	</updateservers>
+</extension>
