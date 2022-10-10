@@ -170,6 +170,8 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 		{
 			if (JDEBUG)
 			{
+				$this->loadLanguage();
+
 				throw new RuntimeException($this->app->getLanguage()->_('PLG_CAPTCHA_TURNSTILE_ERROR_INVALID_RESPONSE'));
 			}
 
