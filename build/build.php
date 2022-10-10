@@ -73,17 +73,17 @@ final class PluginBuildScript
 	{
 		$manifestFile = PATH_ROOT . '/updates/updates.xml';
 		$xml = simplexml_load_file($manifestFile);
-		$children = $xml->children();
-		$counter = 0;
+		$children = $xml->xpath('update');
 
-		foreach ($children as $update)
+		foreach ($children as $key => $update)
 		{
-			if ((string) $update->version === $this->version)
+			if (
+				(string) $update->version === $this->version
+				|| ((string) $update->targetplatform->attributes()['version'] === self::UPDATE_JOOMLA_REGEX && (string) $update->php_minimum === self::PHP_MINIMUM)
+			)
 			{
-				unset($children[$counter]);
+				unset($update[0]);
 			}
-
-			$counter++;
 		}
 
 		//  Static values.
