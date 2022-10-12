@@ -12,12 +12,13 @@ final class PluginBuildScript
 	private const PHP_MINIMUM = '5.3.10';
 	private const PHP_UNSUPPORTED = '8.3';
 
-	private const UPDATE_JOOMLA_REGEX = '(4|3\.([89]|10))';
+	private const UPDATE_JOOMLA_REGEX = '(4\.|3\.([89]|10))';
 	private const UPDATE_NAME = 'Captcha - Cloudflare Turnstile';
 	private const UPDATE_DESCRIPTION = 'Cloudflare Turnstile plugin.';
 	private const REPOSITORY_NAME = 'joomla-turnstile-plugin';
 
 	private string $pluginDirectory;
+	private string $mediaDirectory;
 	private string $pluginName;
 	private string $repositoryUrl;
 	private string $zipFile;
@@ -25,12 +26,14 @@ final class PluginBuildScript
 
 	public function __construct()
 	{
+		$this->pluginName = 'plg_' . self::PLUGIN_TYPE . '_' . self::PLUGIN_ELEMENT;
+
 		$this->pluginDirectory = PATH_ROOT . '/code/plugins/' . self::PLUGIN_TYPE . '/' . self::PLUGIN_ELEMENT;
+		$this->mediaDirectory = PATH_ROOT . '/code/media/' . $this->pluginName;
 
 		$xml = simplexml_load_file($this->pluginDirectory . '/' . self::PLUGIN_ELEMENT . '.xml');
 		$this->version = (string) $xml->version;
 
-		$this->pluginName = 'plg_' . self::PLUGIN_TYPE . '_' . self::PLUGIN_ELEMENT;
 		$this->repositoryUrl = 'https://github.com/SharkyKZ/' . self::REPOSITORY_NAME;
 		$this->zipFile = __DIR__ . '/zips/' . $this->pluginName . '-' . $this->version . '.zip';
 	}
@@ -44,13 +47,14 @@ final class PluginBuildScript
 
 	private function buildZip(): void
 	{
-		if(!is_dir(__DIR__ . '/zips'))
+		if (!is_dir(__DIR__ . '/zips'))
 		{
 			mkdir(__DIR__ . '/zips', 0755);
 		}
 
 		$zip = new ZipArchive;
-		$zip->open($this->zipFile, ZipArchive::CREATE);
+		$zip->open($this->zipFile, ZipArchive::OVERWRITE|ZipArchive::CREATE);
+
 		$iterator = new RecursiveDirectoryIterator($this->pluginDirectory);
 		$iterator2 = new RecursiveIteratorIterator($iterator);
 
@@ -62,6 +66,23 @@ final class PluginBuildScript
 					$file->getPathName(),
 					str_replace(['\\', $this->pluginDirectory . '/'], ['/', ''], $file->getPathName())
 				);
+			}
+		}
+
+		if (is_dir($this->mediaDirectory))
+		{
+			$iterator = new RecursiveDirectoryIterator($this->mediaDirectory);
+			$iterator2 = new RecursiveIteratorIterator($iterator);
+
+			foreach ($iterator2 as $file)
+			{
+				if ($file->isFile())
+				{
+					$zip->addFile(
+						$file->getPathName(),
+						str_replace(['\\', $this->mediaDirectory . '/'], ['/', 'media/'], $file->getPathName())
+					);
+				}
 			}
 		}
 
