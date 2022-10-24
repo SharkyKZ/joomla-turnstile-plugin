@@ -81,8 +81,6 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 		$attributes = array(
 			'class' => rtrim('cf-turnstile ' . $class),
 			'data-sitekey' => $this->params->get('siteKey', ''),
-			'data-theme' => $this->params->get('theme', 'auto'),
-			'data-size' => $this->params->get('size', 'normal'),
 		);
 
 		if ($id !== null && $id !== '')
@@ -93,6 +91,16 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 		if ($name !== null && $name !== '')
 		{
 			$attributes['data-response-field-name'] = $name;
+		}
+
+		if ($value = $this->params->get('theme'))
+		{
+			$attributes['data-theme'] = $value;
+		}
+
+		if ($value = $this->params->get('size'))
+		{
+			$attributes['data-size'] = $value;
 		}
 
 		$attributes = array_map(

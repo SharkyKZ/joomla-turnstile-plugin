@@ -34,10 +34,10 @@
 					name="theme"
 					type="list"
 					label="PLG_CAPTCHA_TURNSTILE_CONFIG_THEME_LABEL"
-					default="auto"
+					default=""
 					validate="options"
 					>
-					<option value="auto">PLG_CAPTCHA_TURNSTILE_CONFIG_THEME_OPTION_AUTO</option>
+					<option value="">PLG_CAPTCHA_TURNSTILE_CONFIG_THEME_OPTION_AUTO</option>
 					<option value="light">PLG_CAPTCHA_TURNSTILE_CONFIG_THEME_OPTION_LIGHT</option>
 					<option value="dark">PLG_CAPTCHA_TURNSTILE_CONFIG_THEME_OPTION_DARK</option>
 				</field>
@@ -45,10 +45,10 @@
 					name="size"
 					type="list"
 					label="PLG_CAPTCHA_TURNSTILE_CONFIG_SIZE_LABEL"
-					default="normal"
+					default=""
 					validate="options"
 					>
-					<option value="normal">PLG_CAPTCHA_TURNSTILE_CONFIG_SIZE_OPTION_NORMAL</option>
+					<option value="">PLG_CAPTCHA_TURNSTILE_CONFIG_SIZE_OPTION_NORMAL</option>
 					<option value="compact">PLG_CAPTCHA_TURNSTILE_CONFIG_SIZE_OPTION_COMPACT</option>
 				</field>
 			</fieldset>
