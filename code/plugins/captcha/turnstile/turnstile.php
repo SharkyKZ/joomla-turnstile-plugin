@@ -82,6 +82,7 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 			'class' => rtrim('cf-turnstile ' . $class),
 			'data-sitekey' => $this->params->get('siteKey', ''),
 			'data-theme' => $this->params->get('theme', 'auto'),
+			'data-size' => $this->params->get('size', 'normal'),
 		);
 
 		if ($id !== null && $id !== '')
