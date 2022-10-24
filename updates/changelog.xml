@@ -16,4 +16,15 @@
 			<item>Corrected update server URL</item>
 		</fix>
 	</changelog>
+	<changelog>
+		<element>turnstile</element>
+		<type>plugin</type>
+		<version>1.1.0</version>
+		<addition>
+			<item>Added widget size option</item>
+		</addition>
+		<fix>
+			<item>Fixed untranslated error string with debug enabled.</item>
+		</fix>
+	</changelog>
 </changelogs>

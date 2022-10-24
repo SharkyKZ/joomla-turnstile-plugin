@@ -5,7 +5,7 @@
 	<creationDate>2022-10-06</creationDate>
 	<copyright>(C) 2022 SharkyKZ</copyright>
 	<license>GPL-2.0-or-later</license>
-	<version>1.0.1</version>
+	<version>1.1.0</version>
 	<description>PLG_CAPTCHA_TURNSTILE_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="turnstile">turnstile.php</filename>
