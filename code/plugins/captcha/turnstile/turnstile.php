@@ -43,6 +43,32 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 	);
 
 	/**
+	 * Supported script's built-in languages.
+	 *
+	 * @var    array
+	 * @since  1.2.0
+	 */
+	private static $languages = array(
+		'ar-EG',
+		'de',
+		'en',
+		'es',
+		'fa',
+		'fr',
+		'id',
+		'it',
+		'ja',
+		'ko',
+		'nl',
+		'pl',
+		'pt-BR',
+		'ru',
+		'tr',
+		'zh-CN',
+		'zh-TW',
+	);
+
+	/**
 	 * Initialises the captcha.
 	 *
 	 * @param   string|null  $id  The id of the field.
@@ -101,6 +127,20 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 		if ($value = $this->params->get('size'))
 		{
 			$attributes['data-size'] = $value;
+		}
+
+		// Use script's built-in language if available.
+		$languageTag = $this->app->getLanguage()->getTag();
+
+		// Use full tag first, fall back to short tag.
+		$languageTags = array(
+			$languageTag,
+			strstr($languageTag, '-', true),
+		);
+
+		if ($foundLanguages = array_intersect($languageTags, self::$languages))
+		{
+			$attributes['data-language'] = reset($foundLanguages);
 		}
 
 		$attributes = array_map(
