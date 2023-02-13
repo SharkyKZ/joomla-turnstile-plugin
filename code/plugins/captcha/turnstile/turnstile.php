@@ -29,7 +29,7 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 	/**
 	 * Supported error codes.
 	 *
-	 * @var    array
+	 * @var    string[]
 	 * @since  1.0.0
 	 */
 	private static $errorCodes = array(
@@ -45,7 +45,7 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 	/**
 	 * Supported script's built-in languages.
 	 *
-	 * @var    array
+	 * @var    string[]
 	 * @since  1.2.0
 	 */
 	private static $languages = array(
