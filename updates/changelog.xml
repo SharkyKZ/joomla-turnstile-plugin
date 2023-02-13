@@ -27,4 +27,12 @@
 			<item>Fixed untranslated error string with debug enabled.</item>
 		</fix>
 	</changelog>
+	<changelog>
+		<element>turnstile</element>
+		<type>plugin</type>
+		<version>1.2.0</version>
+		<addition>
+			<item>Added remote widget translation support. Currently supported languages: Arabic (Egypt), German, English, Spanish, Farsi, French, Indonesian, Italian, Japanese, Korean, Dutch, Polish, Portuguese (Brazil), Russian, Turkish, Chinese (Simplified), Chinese (Traditional).</item>
+		</addition>
+	</changelog>
 </changelogs>
