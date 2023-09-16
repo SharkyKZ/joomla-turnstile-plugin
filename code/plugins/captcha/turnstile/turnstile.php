@@ -49,7 +49,8 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 	 * @since  1.2.0
 	 */
 	private static $languages = array(
-		'ar-EG',
+		'ar-eg',
+		'ar',
 		'de',
 		'en',
 		'es',
@@ -61,11 +62,16 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 		'ko',
 		'nl',
 		'pl',
-		'pt-BR',
+		'pt',
+		'pt-br',
 		'ru',
+		'tlh',
 		'tr',
-		'zh-CN',
-		'zh-TW',
+		'uk',
+		'uk-ua',
+		'zh',
+		'zh-cn',
+		'zh-tw',
 	);
 
 	/**
@@ -130,7 +136,7 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 		}
 
 		// Use script's built-in language if available.
-		$languageTag = $this->app->getLanguage()->getTag();
+		$languageTag = strtolower($this->app->getLanguage()->getTag());
 
 		// Use full tag first, fall back to short tag.
 		$languageTags = array(
