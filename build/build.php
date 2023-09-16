@@ -12,7 +12,7 @@ require (dirname(__DIR__)) . '/build-script/script.php';
 		'SharkyKZ',
 		'Captcha - Cloudflare Turnstile',
 		'Cloudflare Turnstile plugin.',
-		'(4\.|3\.([89]|10))',
+		'(5\.|4\.|3\.([89]|10))',
 		'5.3.10',
 	)
 )->build();
