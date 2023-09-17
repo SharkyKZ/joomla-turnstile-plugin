@@ -35,4 +35,16 @@
 			<item>Added remote widget translation support. Currently supported languages: Arabic (Egypt), German, English, Spanish, Farsi, French, Indonesian, Italian, Japanese, Korean, Dutch, Polish, Portuguese (Brazil), Russian, Turkish, Chinese (Simplified), Chinese (Traditional).</item>
 		</addition>
 	</changelog>
+	<changelog>
+		<element>turnstile</element>
+		<type>plugin</type>
+		<version>1.3.0</version>
+		<addition>
+			<item>Ukrainian language support for widget</item>
+		</addition>
+		<change>
+			<item>Declared PHP 8.3 support</item>
+			<item>Declared Joomla! 5.0 support</item>
+		</change>
+	</changelog>
 </changelogs>
