@@ -108,7 +108,8 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 	 */
 	public function onDisplay($name = null, $id = null, $class = '')
 	{
-		$this->loadLanguage();
+		$language = $this->app->getLanguage();
+		$language->load('plg_captcha_turnstile', JPATH_ADMINISTRATOR);
 
 		$attributes = array(
 			'class' => rtrim('cf-turnstile ' . $class),
@@ -136,7 +137,7 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 		}
 
 		// Use script's built-in language if available.
-		$languageTag = strtolower($this->app->getLanguage()->getTag());
+		$languageTag = strtolower($language->getTag());
 
 		// Use full tag first, fall back to short tag.
 		$languageTags = array(
@@ -178,25 +179,28 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 	 */
 	public function onCheckAnswer($code = null)
 	{
+		$language = $this->app->getLanguage();
+		$language->load('plg_captcha_turnstile', JPATH_ADMINISTRATOR);
+
 		if ($code === null || $code === '')
 		{
 			// No answer provided, form was manipulated.
-			return false;
+			throw new RuntimeException($language->_('PLG_CAPTCHA_TURNSTILE_ERROR_EMPTY'));
 		}
 
 		try
 		{
 			$http = HttpFactory::getHttp();
 		}
-		catch (RuntimeException $exception)
+		// No HTTP transports supported.
+		catch (Exception $exception)
 		{
-			if (JDEBUG)
+			if ($this->params->get('strictMode'))
 			{
-				throw $exception;
+				throw new RuntimeException($language->_('PLG_CAPTCHA_TURNSTILE_ERROR_HTTP_TRANSPORTS'));
 			}
 
-			// No HTTP transports supported.
-			return !$this->params->get('strictMode');
+			return true;
 		}
 
 		$data = array(
@@ -209,28 +213,26 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 			$response = $http->post('https://challenges.cloudflare.com/turnstile/v0/siteverify', $data);
 			$body = json_decode($response->body);
 		}
+		// Connection or transport error.
 		catch (RuntimeException $exception)
 		{
-			if (JDEBUG)
+			if ($this->params->get('strictMode'))
 			{
-				throw $exception;
+				throw new RuntimeException('PLG_CAPTCHA_FRIENDLTYCAPTCHA_ERROR_HTTP_CONNECTION');
 			}
 
-			// Connection or transport error.
-			return !$this->params->get('strictMode');
+			return true;
 		}
 
 		// Remote service error.
 		if ($body === null)
 		{
-			if (JDEBUG)
+			if ($this->params->get('strictMode'))
 			{
-				$this->loadLanguage();
-
-				throw new RuntimeException($this->app->getLanguage()->_('PLG_CAPTCHA_TURNSTILE_ERROR_INVALID_RESPONSE'));
+				throw new RuntimeException($language->_('PLG_CAPTCHA_TURNSTILE_ERROR_INVALID_RESPONSE'));
 			}
 
-			return !$this->params->get('strictMode');
+			return true;
 		}
 
 		if (!isset($body->success) || $body->success !== true)
@@ -238,15 +240,13 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 			// If error codes are pvovided, use them for language strings.
 			if (!empty($body->{'error-codes'}) && is_array($body->{'error-codes'}))
 			{
-				$this->loadLanguage();
-
 				if ($errors = array_intersect($body->{'error-codes'}, self::$errorCodes))
 				{
-					throw new RuntimeException($this->app->getLanguage()->_('PLG_CAPTCHA_TURNSTILE_ERROR_' . strtoupper(str_replace('-', '_', reset($errors)))));
+					throw new RuntimeException($language->_('PLG_CAPTCHA_TURNSTILE_ERROR_' . strtoupper(str_replace('-', '_', reset($errors)))));
 				}
 			}
 
-			return false;
+			throw new RuntimeException($language->_('PLG_CAPTCHA_TURNSTILE_ERROR_VERIFICATION_FAILED'));
 		}
 
 		return true;
