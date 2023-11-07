@@ -1,0 +1,11 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com/SharkyKZ/joomla-plugin-build-script"
+        }
+    ],
+    "require-dev": {
+        "sharky/joomla-plugin-build-script": "dev-master"
+    }
+}

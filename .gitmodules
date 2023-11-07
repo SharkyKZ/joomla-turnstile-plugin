@@ -1,3 +1,0 @@
-[submodule "build-script"]
-	path = build-script
-	url = https://github.com/SharkyKZ/joomla-plugin-build-script.git

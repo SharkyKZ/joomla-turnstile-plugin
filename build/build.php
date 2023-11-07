@@ -1,9 +1,11 @@
 <?php
 
-require (dirname(__DIR__)) . '/build-script/script.php';
+use Sharky\Joomla\PluginBuildScript\Script;
+
+require __DIR__ . '/vendor/autoload.php';
 
 (
-	new PluginBuildScript(
+	new Script(
 		str_replace('\\', '/', dirname(__DIR__)),
 		str_replace('\\', '/', __DIR__),
 		'turnstile',
