@@ -164,6 +164,11 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 			}
 		}
 
+		if ($value = $this->params->get('retry-interval'))
+		{
+			$attributes['data-retry-interval'] = $value;
+		}
+
 		// Use script's built-in language if available.
 		$languageTag = strtolower($language->getTag());
 

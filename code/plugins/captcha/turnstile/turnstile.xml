@@ -55,6 +55,16 @@
 					<option value="">PLG_CAPTCHA_TURNSTILE_CONFIG_SIZE_OPTION_NORMAL</option>
 					<option value="compact">PLG_CAPTCHA_TURNSTILE_CONFIG_SIZE_OPTION_COMPACT</option>
 				</field>
+				<field
+					name="retry-interval"
+					type="number"
+					label="PLG_CAPTCHA_TURNSTILE_CONFIG_RETRY_INTERVAL_LABEL"
+					description="PLG_CAPTCHA_TURNSTILE_CONFIG_RETRY_INTERVAL_DESCRIPTION"
+					filter="int"
+					min="1000"
+					max="899999"
+					validate="number"
+				/>
 			</fieldset>
 			<fieldset name="advanced">
 				<field
