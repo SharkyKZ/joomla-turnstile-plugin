@@ -67,6 +67,57 @@
 					<option value="0">JNO</option>
 				</field>
 			</fieldset>
+			<fieldset name="callbacks" label="PLG_CAPTCHA_TURNSTILE_CONFIG_FIELDSET_CALLBACK_LABEL">
+			<field
+					name="callback"
+					type="text"
+					filter="string"
+					label="PLG_CAPTCHA_TURNSTILE_CONFIG_CALLBACK_LABEL"
+					description="PLG_CAPTCHA_TURNSTILE_CONFIG_CALLBACK_DESCRIPTION"
+				/>
+				<field
+					name="error-callback"
+					type="text"
+					filter="string"
+					label="PLG_CAPTCHA_TURNSTILE_CONFIG_ERROR_CALLBACK_LABEL"
+					description="PLG_CAPTCHA_TURNSTILE_CONFIG_ERROR_CALLBACK_DESCRIPTION"
+				/>
+				<field
+					name="expired-callback"
+					type="text"
+					filter="string"
+					label="PLG_CAPTCHA_TURNSTILE_CONFIG_EXPIRED_CALLBACK_LABEL"
+					description="PLG_CAPTCHA_TURNSTILE_CONFIG_EXPIRED_CALLBACK_DESCRIPTION"
+				/>
+				<field
+					name="before-interactive-callback"
+					type="text"
+					filter="string"
+					label="PLG_CAPTCHA_TURNSTILE_CONFIG_BEFORE_INTERACTIVE_CALLBACK_LABEL"
+					description="PLG_CAPTCHA_TURNSTILE_CONFIG_BEFORE_INTERACTIVE_CALLBACK_DESCRIPTION"
+				/>
+				<field
+					name="after-interactive-callback"
+					type="text"
+					filter="string"
+					label="PLG_CAPTCHA_TURNSTILE_CONFIG_AFTER_INTERACTIVE_CALLBACK_LABEL"
+					description="PLG_CAPTCHA_TURNSTILE_CONFIG_AFTER_INTERACTIVE_CALLBACK_DESCRIPTION"
+				/>
+				<field
+					name="unsupported-callback"
+					type="text"
+					filter="string"
+					label="PLG_CAPTCHA_TURNSTILE_CONFIG_UNSUPPORTED_CALLBACK_LABEL"
+					description="PLG_CAPTCHA_TURNSTILE_CONFIG_UNSUPPORTED_CALLBACK_DESCRIPTION"
+				/>
+				<field
+					name="timeout-callback"
+					type="text"
+					filter="string"
+					label="PLG_CAPTCHA_TURNSTILE_CONFIG_TIMEOUT_CALLBACK_LABEL"
+					description="PLG_CAPTCHA_TURNSTILE_CONFIG_TIMEOUT_CALLBACK_DESCRIPTION"
+				/>
+			</fieldset>
 		</fields>
 	</config>
 	<changelogurl>https://raw.githubusercontent.com/SharkyKZ/joomla-turnstile-plugin/master/updates/changelog.xml</changelogurl>

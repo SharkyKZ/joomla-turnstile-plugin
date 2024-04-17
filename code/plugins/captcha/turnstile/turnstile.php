@@ -151,6 +151,19 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 			$attributes['data-size'] = $value;
 		}
 
+		if ($value = $this->params->get('callback'))
+		{
+			$attributes['data-callback'] = $value = $this->params->get('callback');
+		}
+
+		foreach (array('error', 'expired', 'before-interactive', 'after-interactive', 'unsupported', 'timeout') as $callback)
+		{
+			if ($value = $this->params->get($callback . '-callback'))
+			{
+				$attributes['data-' . $callback . '-callback'] = $value;
+			}
+		}
+
 		// Use script's built-in language if available.
 		$languageTag = strtolower($language->getTag());
 
