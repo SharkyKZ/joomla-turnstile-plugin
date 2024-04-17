@@ -23,11 +23,13 @@
 				<field
 					name="siteKey"
 					type="text"
+					filter="string"
 					label="PLG_CAPTCHA_TURNSTILE_CONFIG_SITE_KEY_LABEL"
 				/>
 				<field
 					name="secret"
 					type="text"
+					filter="string"
 					label="PLG_CAPTCHA_TURNSTILE_CONFIG_SECRET_LABEL"
 				/>
 				<field
@@ -35,6 +37,7 @@
 					type="list"
 					label="PLG_CAPTCHA_TURNSTILE_CONFIG_THEME_LABEL"
 					default=""
+					filter="string"
 					validate="options"
 					>
 					<option value="">PLG_CAPTCHA_TURNSTILE_CONFIG_THEME_OPTION_AUTO</option>
@@ -46,6 +49,7 @@
 					type="list"
 					label="PLG_CAPTCHA_TURNSTILE_CONFIG_SIZE_LABEL"
 					default=""
+					filter="string"
 					validate="options"
 					>
 					<option value="">PLG_CAPTCHA_TURNSTILE_CONFIG_SIZE_OPTION_NORMAL</option>
