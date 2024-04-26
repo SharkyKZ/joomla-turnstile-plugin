@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 
 use Sharky\Joomla\PluginBuildScript\Script;
