@@ -9,14 +9,14 @@
 		<client>site</client>
 		<maintainer>SharkyKZ</maintainer>
 		<maintainerurl>https://github.com/SharkyKZ/joomla-turnstile-plugin</maintainerurl>
-		<version>1.3.0</version>
+		<version>1.4.0</version>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/SharkyKZ/joomla-turnstile-plugin/releases/download/1.3.0/plg_captcha_turnstile-1.3.0.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/SharkyKZ/joomla-turnstile-plugin/releases/download/1.4.0/plg_captcha_turnstile-1.4.0.zip</downloadurl>
 		</downloads>
-		<sha512>73f2db5a607cb065f83df98ed2f6cb99011bda0ed3dc26e4875b8a9d0b5491f9a7921948b049019e471f94f0d27350c088a382eac9753d75dde827ced6fd7754</sha512>
-		<sha384>6a7520483462feb052d7a43f09431d8bc52b53b90710c3db380668dcfa4b857dc23d9b37a9856bbb750eb751024d89e6</sha384>
-		<sha256>9a4177d87c78e05ae4a191c8cdc4c2d31d11d8c51bbd7d220feca4bdf7cd1b26</sha256>
-		<infourl title="Captcha - Cloudflare Turnstile">https://github.com/SharkyKZ/joomla-turnstile-plugin/releases/tag/1.3.0</infourl>
+		<sha512>923dddcb03b9bb4260a2afb531540ed0ebc77fd51e9e0e9f223a1780147d1475473b95b9f00d92556a2183e68f94f40dc1ede9a013e7b46f45a67f33a85cf691</sha512>
+		<sha384>7485f7113f8d4970a5a8e94d00af04d4825d6c9add88872e0f1df01bb0f387af9b10be3563accc1dec6e9319fe26f249</sha384>
+		<sha256>bc9e1d0696f383e60905ee6d95be18de30dfddade66d0ef12bb2599b0e96990c</sha256>
+		<infourl title="Captcha - Cloudflare Turnstile">https://github.com/SharkyKZ/joomla-turnstile-plugin/releases/tag/1.4.0</infourl>
 		<changelogurl>https://raw.githubusercontent.com/SharkyKZ/joomla-turnstile-plugin/master/updates/changelog.xml</changelogurl>
 		<targetplatform name="joomla" version="(5\.|4\.|3\.([89]|10))"/>
 		<php_minimum>5.3.10</php_minimum>

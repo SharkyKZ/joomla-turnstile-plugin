@@ -47,4 +47,17 @@
 			<item>Declared Joomla! 5.0 support</item>
 		</change>
 	</changelog>
+	<changelog>
+		<element>turnstile</element>
+		<type>plugin</type>
+		<version>1.4.0</version>
+		<addition>
+			<item>Added more widget languages</item>
+			<item>Added callback options</item>
+			<item>Added retry-interval option</item>
+		</addition>
+		<change>
+			<item>Upgraded license to GPL v3</item>
+		</change>
+	</changelog>
 </changelogs>
