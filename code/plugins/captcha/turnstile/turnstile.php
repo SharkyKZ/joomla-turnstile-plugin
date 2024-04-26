@@ -251,7 +251,7 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 		{
 			if ($this->params->get('strictMode'))
 			{
-				throw new RuntimeException('PLG_CAPTCHA_FRIENDLTYCAPTCHA_ERROR_HTTP_CONNECTION');
+				throw new RuntimeException('PLG_CAPTCHA_TURNSTILE_ERROR_HTTP_CONNECTION');
 			}
 
 			return true;
