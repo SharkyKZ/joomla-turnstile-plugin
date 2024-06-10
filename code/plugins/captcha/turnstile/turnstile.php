@@ -104,7 +104,7 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 		$this->app->getDocument()->addScript(
 			'https://challenges.cloudflare.com/turnstile/v0/api.js',
 			array(),
-			array('async' => true, 'defer' => true, 'referrerpolicy' => 'no-referrer')
+			array('defer' => true, 'referrerpolicy' => 'no-referrer')
 		);
 
 		return true;
