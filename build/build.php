@@ -16,6 +16,6 @@ require __DIR__ . '/vendor/autoload.php';
 		'Captcha - Cloudflare Turnstile',
 		'Cloudflare Turnstile plugin.',
 		'(5\.|4\.|3\.([89]|10))',
-		'5.3.10',
+		'5.4',
 	)
 )->build();

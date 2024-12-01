@@ -4,5 +4,5 @@ Turnstile is Cloudflare's smart CAPTCHA alternative. It can be embedded into any
 
 ### System Requirements
 
-- Joomla 3.8 or higher (5.x is supported).
-- PHP 5.3.10 or higher (8.3 is supported).
+- Joomla 3.8 or higher (5.x is supported)
+- PHP 5.4 or higher
