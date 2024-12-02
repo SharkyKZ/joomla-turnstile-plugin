@@ -54,6 +54,7 @@
 					>
 					<option value="">PLG_CAPTCHA_TURNSTILE_CONFIG_SIZE_OPTION_NORMAL</option>
 					<option value="compact">PLG_CAPTCHA_TURNSTILE_CONFIG_SIZE_OPTION_COMPACT</option>
+					<option value="flexible">PLG_CAPTCHA_TURNSTILE_CONFIG_SIZE_OPTION_FLEXIBLE</option>
 				</field>
 				<field
 					name="retry-interval"
