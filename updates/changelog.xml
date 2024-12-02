@@ -63,7 +63,7 @@
 	<changelog>
 		<element>turnstile</element>
 		<type>plugin</type>
-		<version>1.5.0</version>
+		<version>1.5.1</version>
 		<change>
 			<item>Declared PHP 8.4 support</item>
 			<item>Increased PHP requirement to PHP 5.4</item>
