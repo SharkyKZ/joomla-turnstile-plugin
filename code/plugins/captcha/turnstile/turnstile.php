@@ -81,6 +81,7 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 		'sr-ba',
 		'sv-se',
 		'th-th',
+		'tl-ph',
 		'tlh',
 		'tr-tr',
 		'uk-ua',
