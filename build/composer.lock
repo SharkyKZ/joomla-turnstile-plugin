@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SharkyKZ/joomla-plugin-build-script.git",
-                "reference": "8b89a115fffc41bddd45a32e3950abeeb2893541"
+                "reference": "c9c44d8c24050c50f708c260a3f46a18c6f25631"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SharkyKZ/joomla-plugin-build-script/zipball/8b89a115fffc41bddd45a32e3950abeeb2893541",
-                "reference": "8b89a115fffc41bddd45a32e3950abeeb2893541",
+                "url": "https://api.github.com/repos/SharkyKZ/joomla-plugin-build-script/zipball/c9c44d8c24050c50f708c260a3f46a18c6f25631",
+                "reference": "c9c44d8c24050c50f708c260a3f46a18c6f25631",
                 "shasum": ""
             },
             "default-branch": true,
@@ -32,7 +32,7 @@
                 "source": "https://github.com/SharkyKZ/joomla-plugin-build-script/tree/master",
                 "issues": "https://github.com/SharkyKZ/joomla-plugin-build-script/issues"
             },
-            "time": "2024-12-02T07:21:45+00:00"
+            "time": "2024-12-02T07:32:54+00:00"
         }
     ],
     "aliases": [],
