@@ -60,4 +60,20 @@
 			<item>Upgraded license to GPL v3</item>
 		</change>
 	</changelog>
+	<changelog>
+		<element>turnstile</element>
+		<type>plugin</type>
+		<version>1.5.0</version>
+		<change>
+			<item>Declared PHP 8.4 support</item>
+			<item>Increased PHP requirement to PHP 5.4</item>
+		</change>
+		<fix>
+			<item>Removed `async` attribute from script. May fix some JS issues</item>
+		</fix>
+		<addition>
+			<item>Added `flexible` widget size option</item>
+			<item>Added Tagalog (Philippines) widget language support</item>
+		</addition>
+	</changelog>
 </changelogs>
