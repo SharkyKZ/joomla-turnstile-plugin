@@ -73,7 +73,7 @@
 		</fix>
 		<addition>
 			<item>Added `flexible` widget size option</item>
-			<item>Added Tagalog (Philippines) widget language support</item>
+			<item>Added Tagalog (Philippines) language support for widget</item>
 		</addition>
 	</changelog>
 </changelogs>
