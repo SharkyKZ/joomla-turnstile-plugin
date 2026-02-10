@@ -6,6 +6,7 @@
 
 defined('_JEXEC') || exit;
 
+use Joomla\CMS\Form\Field\CaptchaField;
 use Joomla\CMS\Http\HttpFactory;
 use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\CMS\Plugin\PluginHelper;
@@ -199,6 +200,21 @@ final class PlgCaptchaTurnstile extends CMSPlugin
 		$html .= ob_get_clean();
 
 		return $html;
+	}
+
+	/**
+	 * Alters form field.
+	 *
+	 * @param   CaptchaField       $field    Captcha field instance
+	 * @param   \SimpleXMLElement  $element  XML form definition
+	 *
+	 * @return  void
+	 *
+	 * @since  1.6.0
+	 */
+	public function onSetupField(CaptchaField $field, \SimpleXMLElement $element)
+	{
+		$element['hiddenLabel'] = 'true';
 	}
 
 	/**
